@@ -36,7 +36,7 @@ set :ssh_options,     {
 }
 
 # rvm
-set :rbenv_ruby, '2.5.1'
+set :rbenv_ruby
 
 # environment
 set :linked_dirs, fetch(:linked_dirs, []).push(
