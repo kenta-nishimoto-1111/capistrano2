@@ -50,7 +50,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push(
 )
 set :linked_files, fetch(:linked_files, []).push(
     'config/database.yml',
-    'config/secrets.yml'
+    #'config/secrets.yml'
 )
 
 namespace :puma do
@@ -91,7 +91,7 @@ namespace :deploy do
             execute "mkdir -p #{shared_path}/config"
         end
         upload!('config/database.yml', "#{shared_path}/config/database.yml")
-        upload!('config/secrets.yml', "#{shared_path}/config/secrets.yml")
+        #upload!('config/secrets.yml', "#{shared_path}/config/secrets.yml")
         end
     end
 
