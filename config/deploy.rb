@@ -55,7 +55,7 @@ set :linked_files, fetch(:linked_files, []).push(
 
 namespace :puma do
     desc 'Create Directories for Puma Pids and Socket'
-    task :make_dirs do
+    task puma:make_dirs do
         on roles(:app) do
         execute "mkdir #{shared_path}/tmp/sockets -p"
         execute "mkdir #{shared_path}/tmp/pids -p"
