@@ -95,6 +95,6 @@ namespace :deploy do
         end
     end
 
-    before :deploy,     :upload
-    before :deploy,     :check_revision
+    before :deploy,     'deploy:upload'
+    before :deploy,     'deploy:check_revision'
 end
